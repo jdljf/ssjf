@@ -1,0 +1,23 @@
+<div class="fe-panel-editor-title">导航设置<span class="tips"></span></div>
+<div class="fe-panel-editor-line">
+    <div class="fe-panel-editor-con-bread" ng-repeat="(key, menu) in Edit.data">
+        <input class="fe-panel-editor-input-bread" placeholder="标题" ng-model="menu.name" />
+        <input class="fe-panel-editor-input-bread" placeholder="链接" ng-model="menu.link" />
+        <span class="remove-bread-btn" ng-click="removeBreadItem(Edit.data, key)">移除</span>
+        <span class="set-bread-active-btn active" ng-click="menu.active = 0" ng-show="menu.active == 1">选中</span>
+        <span class="set-bread-active-btn" ng-click="menu.active = 1" ng-show="menu.active != 1">选中</span>
+    </div>
+    <span class="edit-new-bread" ng-click="addNewBread(Edit)">添加菜单</span>
+</div>
+<div class="fe-panel-editor-line">
+    <div class="fe-panel-editor-name">文字颜色</div>
+    <div class="fe-panel-editor-con">
+        <input class="fe-panel-editor-input2" type="color" ng-model="Edit.params.color" />
+    </div>
+</div>
+<div class="fe-panel-editor-line">
+    <div class="fe-panel-editor-name">背景颜色</div>
+    <div class="fe-panel-editor-con">
+        <input class="fe-panel-editor-input2" type="color" ng-model="Edit.params.bgcolor" />
+    </div>
+</div>

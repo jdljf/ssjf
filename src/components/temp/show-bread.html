@@ -1,0 +1,7 @@
+<ul class="fe-mod bread-nav" ng-class="{'fe-mod-select':Item.id == focus}" ng-style="{'color':Item.params.color,'background-color':Item.params.bgcolor}">
+    <li ng-repeat="menu in Item.data" class="bread-item" ng-class="{true : 'active', false: ''}[menu.active == 1]">
+        <a href="{{menu.link|| '#'}}">
+            {{menu.name}}
+        </a>
+    </li>
+</ul>
